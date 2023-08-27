@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@500&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(184, 127, 48);
+}
+main{
+    margin-top: 60px;
+}
+
+
+.topnav{
+    height: 60px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: none;
+    background-color: #2a2734;
+    z-index: 1;
+    box-shadow: 0px 16px 16px 8px rgba(0,0,0,0.1);
+}
+.topnav > *{ 
+    display: inline-table;
+}
+.logo{
+    top: 0;
+    height: 50px;
+    width: 150px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li {
+    float: left;
+    border-left: 1px solid #bbb;
+}
+li a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    align-items:baseline;
+    background-color: #2a2734;
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: left;
+    font-family: 'Wix Madefor Display', sans-serif;
+}
+
+
+.contacts{
+    background-color: rgb(48, 48, 48);
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transition: border-radius .3s ease, height .4s ease;
+}
+.contacts:hover {
+    height: 15rem;
+    border-radius: 15px;
+}
+.contacts:hover > a{
+    display: block;
+}
+.contacts > a {
+    display: none;
+    margin: 10px auto auto auto;
+    text-decoration: none;
+}
+.contacts > a > img {
+    width: 65px;
+    height: 65px;
+}
+.whatsapp{
+    background-color: darkslategray;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+.email{
+    background-color: darkgray;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+.telefone{
+    background-color: lightgray;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 2em;
+}
+.boxes > div {
+    transition: 0.2s ease-in-out;
+}
+.boxes > div:hover {
+    transform: scale(0.95);
+}
+.box-one {
+    height: 90rem;
+    width: 50rem;
+    background-color: white;
+}
+.box-two {
+    height: 40rem;
+    width: 30rem;
+    background-color: gray;
+}
+.box-three {
+    height: 20rem;
+    width: 20rem;
+    background-color: rgb(65, 49, 49);
+}
+.box-four {
+    height: 20rem;
+    width: 20rem;
+    background-color: rgb(86, 78, 78);
+}
+.box-five {
+    height: 30rem;
+    width: 80rem;
+    background-color: lightgray;
+}
