@@ -1,25 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@500&display=swap');
+
+/* General Styles */
 html {
-    background:
-     linear-gradient(357deg,
-         rgba(183, 19, 117, 1) -11.22%,
-          rgba(209, 72, 95, 0.59) 72.86%,
-           rgba(247, 149, 64, 1) 106.76%);
+    background: linear-gradient(357deg, rgba(183, 19, 117, 1) -11.22%, rgba(209, 72, 95, 0.59) 72.86%, rgba(247, 149, 64, 1) 106.76%);
 }
+
 body {
     background-image: url(img/Background.png);
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Wix Madefor Display', sans-serif;
+    color: white;
 }
 
-
-
-/* Menu de navegação */
-.topnav{
+/* Top Navigation */
+.topnav {
     height: 100px;
     background-color: #9F005F;
     box-shadow: 0px 53px 48px 0px rgba(0, 0, 0, 0.25); 
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     display: flex;
@@ -27,102 +25,81 @@ body {
     align-items: center;
 }
 
-.logo > img{
-    padding-left: 10px;
+.logo img {
     height: 100px;
     width: 150px;
+    padding: 0 10px;
 }
 
-.buttons{
-    justify-content: flex-end;
-    margin-right: 50px;
-}
-
-.buttons a{
+.buttons a {
     text-decoration: none;
     color: white;
-    font-family: 'Wix Madefor Display';
-    font-weight: bolder;
-    font-size: 1.50em;
+    font-weight: bold;
+    font-size: 1.5em;
     margin-right: 15px;
-    background: none;
 }
 
-.buttons > a:hover{
+.buttons a:hover {
     color: darkorange;
 }
 
-
-
-/* Imagem principal */
+/* Main Page */
 .main-page {
-    height: 1300px;
-    background-color: rgb(177, 108, 108);
-}
-
-.main-page > img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-
-/* Seção Sobre Nós*/
-.about-us {
-    height: 1300px;
-}
-.about-us > h1 {
-    color: white;
-    font-family: 'Wix Madefor Display';
-    font-weight: bolder;
-    line-height: 105px;
-    text-align: center;
-    font-size: 3em;
-    background-color: #fc4f00;
-    width: 550px;
-    height: 105px;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-}
-.about-us > h2 {
-    color: white;
-    font-family: 'Wix Madefor Display';
-    line-height: 105px;
-    text-align: center;
-    font-size: 1.50em;
-
-}
-
-.content-aboutus {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 10px;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.img1 > img{
-    width: auto;
+.main-page > img {
+    max-width: 100%;
     height: auto;
 }
 
-.img2 > img{
-    width: auto;
+/* About Us Section */
+.about-us {
+    padding: 50px ;
+    text-align: center;
+}
+
+.about-us > h1 {
+    background-color: #fc4f00;
+    width: fit-content;
+    padding: 10px 20px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    left: 0;
+}
+
+
+.blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.block {
+    margin: 20px;
+    max-width: 400px;
+    text-align: justify;
+}
+
+.block > img {
+    max-width: 100%;
     height: auto;
 }
 
-.text1 > h3, .text2 > h3{
-    color: white;
-    font-size: 2em;
-    font-weight: 800;
-}
 
-.text1 > p, .text2 > p{
-    margin: 0;
-    color: white;
-    font-size: 1.75em;
-    max-width: 756px;
-    text-justify: auto;
+/* Media Query for Small Screens */
+@media screen and (max-width: 600px) {
+    .blocks {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .block {
+        margin: 20px 0;
+    }
 }
 
 
@@ -131,9 +108,6 @@ body {
     height: 3330px;
     background-color: burlywood;
 }
-
-
-
 
 /* Seção Contatos*/
 .contacts {
@@ -147,15 +121,4 @@ body {
     height: 1130px;
     background-color: deeppink;
 }
-
-@media screen and (max-width:600px) {
-    .content-aboutus{
-        display: grid;
-        grid-template-rows: auto auto auto auto;
-        grid-template-columns: none;
-        grid-gap: 10px;
-        align-items: center;
-    }
-}
-
 
