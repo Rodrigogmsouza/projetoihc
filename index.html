@@ -1,61 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Clube New Way</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clube New Way</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    /* GERAL */
+    html {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      margin: 0px;
+      font-family: 'Wix Madefor Display', sans-serif;
+      color: white;
+      background-color: #C3B1E1;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    h1 {
+      font-family: "Inter", sans-serif;
+      font-weight: 800;
+      margin: 0;
+    }
+
+    .section-mark {
+      height: 60px;
+      padding: 10px 20px;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      background-color: #fc4f00;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .section-mark>h1 {
+      font-size: 2vw;
+    }
+
+    /* TOP NAV */
+    .topnav {
+      background-color: #9F005F;
+      width: 100%;
+      min-height: 80px;
+      z-index: 10;
+      top: 0;
+      display: flex;
+      position: sticky;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .top-logo>img {
+      max-width: fit-content;
+      max-height: fit-content;
+      padding: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .top-logo>img:hover {
+      transform: scale(0.9);
+    }
+
+    .top-links {
+      margin-right: 15px;
+    }
+
+    .top-links>a {
+      padding: 10px;
+      font-weight: bold;
+      transition: font-size 0.3s ease, color 0.3s ease;
+    }
+
+    .top-links>a:hover {
+      font-size: large;
+      color: darkorange;
+    }
+
+    /* LOGO */
+    .logo {
+      width: 100%;
+      height: 100vh;
+    }
+
+    .logo-img {
+      height: calc(100vh - 600px);
+      width: 100%;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .logo-img>img {
+      z-index: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 20% 100%;
+    }
+
+    .logo-img>h1,
+    .logo-img>h3 {
+      z-index: 1;
+    }
+
+    .logo-img>h1 {
+      font-size: 10vw;
+    }
+
+    .logo-img>h3 {
+      font-size: 2vw;
+      margin: 0;
+    }
+
+    .purple-w {
+      color: #7F00FF;
+      margin: 0;
+    }
+
+    .orange-w {
+      color: #FFA800;
+      margin: 0;
+    }
+
+    /* SEÇÃO SOBRE */
+    .about {
+      width: 100%;
+    }
+
+    .about>h2 {
+      text-align: center;
+    }
+
+    .about-block-one,
+    .about-block-two {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 20px;
+      margin: 20px 0;
+      /* Margin: top and bottom */
+    }
+
+    .about-block-one>img {
+      width: 500px;
+      height: 500px;
+      padding-left: 10%;
+      transition: height 0.3s ease, width 0.3s ease;
+    }
+
+    .about-block-one>img:hover {
+      height: 600px;
+      width: 600px;
+    }
+
+    .about-block-two>img {
+      width: 700px;
+      height: 500px;
+      transition: height 0.3s ease, width 0.3s ease;
+    }
+
+    .about-block-two>img:hover {
+      height: 600px;
+      width: 750px;
+    }
+
+    .about-text {
+      padding: 20px;
+      width: 50%;
+      font-size: large;
+    }
+
+    /* SEÇÃO AULAS */
+  </style>
 </head>
+
 <body>
-    <!--Topnav-->
-    <div class="topnav">
-        <a href="#main-page">
-            <div class="logo">
-                <img src="img/logo.svg" alt="Logo do clube New Way, dois W pintados nas cores do clube, laranja e roxo.">
-            </div>
-        </a>
-        <div class="buttons">
-            <a href="#about-us" class="sobre">SOBRE NÓS</a>
-            <a href="#classes" class="programas">PROGRAMAS</a>
-            <a href="#contacts" class="contatos">CONTATOS</a>
-            <a href="#local" class="local">LOCALIZAÇÃO</a>
-        </div>
+  <div class="topnav">
+    <div class="top-logo">
+      <img src="img/logo.svg" alt="Logo do clube; Dois W pintados nas cores laranja e roxo.">
     </div>
-
-    <!--Pagina Inicial/Imagem principal-->
-    <div id="main-page" class="main-page">
-        <img src="img/main.png" alt="Imagem principal">
+    <div class="top-links">
+      <a href="#about">SOBRE NÓS</a>
+      <a href="#classes">PROGRAMAS</a>
+      <a href="#contacts">CONTATOS</a>
+      <a href="local">LOCALIZAÇÃO</a>
     </div>
-
-    <!--Seção Sobre Nós-->
-    <div id="about-us" class="about-us">
-        <h1>SOBRE A NEW WAY</h1>
-        <h2>Já pensou em praticar Patinação Artística e ainda ganhar novos amigos e memórias para a vida?</h2>
-        <div class="blocks">
-            <div class="block">
-                <img src="img/img6.png" alt="Imagem um">
-            </div>
-            <div class="block">
-                <h3>QUEM SOMOS</h3>
-                <p>Em 2020 o Clube New Way nasceu da realização de um sonho. No Clube New Way atendemos as cidades de Gravataí e Cachoeirinha, oferecendo aulas de patinação artística a pessoas de todas as idades que queiram aprender, competir ou simplesmente se divertir com este elegante esporte.</p>
-            </div>
-            <div class="block">
-                <img src="img/img2.png" alt="Imagem dois">
-            </div>
-            <div class="block">
-                <h3>NOSSA MISSÃO</h3>
-                <p>Aqui nós te ajudamos a encontrar novos caminhos profissionais, com foco, dedicação e muito amor. Afinal, a patinação vai muito além do esporte. É aprendizado, lazer e competição. Venha fazer parte da nossa família!</p>
-            </div>
-        </div>
+  </div>
+  <div class="logo">
+    <div class="logo-img">
+      <img src="img/pexels-rdne-stock-project-7335269 1.svg" alt="">
+      <h1>
+        NE<span class="purple-w">W</span><span class="orange-w">W</span>AY
+      </h1>
+      <h3>Clube de Patinação Artística</h3>
     </div>
-
-    <!-- Seção Programas -->
-    <div id="classes" class="classes"></div>
-    
-    <!-- Seção Contatos -->
-    <div id="contacts" class="contacts"></div>
-    
-    <!-- Seção Localização -->
-    <div id="local" class="local"></div>
+  </div>
+  <div class="about" id="about">
+    <div class="section-mark">
+      <h1>SOBRE A NEW WAY</h1>
+    </div>
+    <h2>
+      Já pensou em praticar Patinação Artística e ainda ganhar novos amigos e memórias para a vida?
+    </h2>
+    <div class="about-block-one">
+      <img src="img/img6.png" alt="Imagem um">
+      <div class="about-text">
+        <h3>QUEM SOMOS</h3>
+        <p>Em 2020 o Clube New Way nasceu da realização de um sonho. No Clube New Way atendemos as cidades de Gravataí e
+          Cachoeirinha, oferecendo aulas de patinação artística a pessoas de todas as idades que queiram aprender,
+          competir ou simplesmente se divertir com este elegante esporte.</p>
+      </div>
+    </div>
+    <div class="about-block-two">
+      <div class="about-text">
+        <h3>NOSSA MISSÃO</h3>
+        <p>Aqui nós te ajudamos a encontrar novos caminhos profissionais, com foco, dedicação e muito amor. Afinal, a
+          patinação vai muito além do esporte. É aprendizado, lazer e competição. Venha fazer parte da nossa família!
+        </p>
+      </div>
+      <img src="img/img2.png" alt="Imagem dois">
+    </div>
+  </div>
+  <div class="classes" id="classes"></div>
 </body>
+
 </html>
