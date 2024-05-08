@@ -1,124 +1,296 @@
 @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-/* General Styles */
+/* GERAL */
 html {
-    background: linear-gradient(357deg, rgba(183, 19, 117, 1) -11.22%, rgba(209, 72, 95, 0.59) 72.86%, rgba(247, 149, 64, 1) 106.76%);
+  height: 100%;
+  width: 100%;
 }
 
 body {
-    background-image: url(img/Background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-family: 'Wix Madefor Display', sans-serif;
-    color: white;
+  margin: 0px;
+  font-family: 'Wix Madefor Display', sans-serif;
+  color: white;
+  background-color: #C3B1E1;
 }
 
-/* Top Navigation */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  margin: 0;
+}
+
+.section-mark {
+  height: 60px;
+  padding: 10px 20px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: #fc4f00;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.section-mark>h1 {
+  font-size: 2vw;
+}
+
+/* TOP NAV 
 .topnav {
-    height: 100px;
-    background-color: #9F005F;
-    box-shadow: 0px 53px 48px 0px rgba(0, 0, 0, 0.25); 
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #9F005F;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  display: flex;
+  position: sticky;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.logo img {
-    height: 100px;
-    width: 150px;
-    padding: 0 10px;
+.top-logo>img {
+  max-width: fit-content;
+  max-height: fit-content;
+  padding: 10px;
+  transition: transform 0.3s ease;
 }
 
-.buttons a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1.5em;
-    margin-right: 15px;
+.top-logo>img:hover {
+  transform: scale(0.9);
 }
 
-.buttons a:hover {
-    color: darkorange;
+.top-links {
+  margin-right: 15px;
 }
 
-/* Main Page */
-.main-page {
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.top-links>a {
+  padding: 10px;
+  font-weight: bold;
+  transition: font-size 0.3s ease, color 0.3s ease;
 }
 
-.main-page > img {
-    max-width: 100%;
-    height: auto;
+.top-links>a:hover {
+  font-size: large;
+  color: darkorange;
+}
+*/
+
+.topnav {
+  background-color: #9F005F;
+  width: 100%;
+  min-height: 80px;
+  z-index: 10;
+  top: 0;
+  display: flex;
+  position: sticky;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-/* About Us Section */
-.about-us {
-    padding: 50px ;
+
+
+.top-logo>img {
+  max-width: fit-content;
+  max-height: fit-content;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.top-logo>img:hover {
+  transform: scale(0.9);
+}
+
+.top-links {
+  display: flex;
+}
+
+.top-links>a {
+  padding: 10px;
+  font-weight: bold;
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.top-links>a:hover {
+  font-size: large;
+  color: darkorange;
+}
+
+.dropdown-icon {
+  display: none;
+  /* Initially hide the dropdown icon */
+}
+
+.dropdown-btn {
+  background-color: #9F005F;
+  color: white;
+  font-size: 35px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: #9F005F;
+  position: absolute;
+  right: 0;
+  padding-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.dropdown-content>a {
+  display: block;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content>a:hover {
+  background-color: darkorange;
+}
+
+@media (max-width: 768px) {
+  .top-links {
+    display: none;
+    /* Hide the top links */
+  }
+
+  .top-logo {
+    padding: 15px;
+    flex: 1;
     text-align: center;
-}
+    /* Center the logo */
+  }
 
-.about-us > h1 {
-    background-color: #fc4f00;
-    width: fit-content;
-    padding: 10px 20px;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    left: 0;
+  .dropdown-icon {
+    display: block;
+  }
 }
 
 
-.blocks {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+/* LOGO */
+.logo {
+  width: 100%;
+  height: 100vh;
 }
 
-.block {
-    margin: 20px;
-    max-width: 400px;
-    text-align: justify;
+.logo-img {
+  height: calc(100vh - 600px);
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.block > img {
-    max-width: 100%;
-    height: auto;
+.logo-img>img {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 20% 100%;
 }
 
-
-/* Media Query for Small Screens */
-@media screen and (max-width: 600px) {
-    .blocks {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .block {
-        margin: 20px 0;
-    }
+.logo-img>h1,
+.logo-img>h3 {
+  z-index: 1;
 }
 
+.logo-img>h1 {
+  font-size: 10vw;
+}
 
-/* Seção Programas*/
+.logo-img>h3 {
+  font-size: 2vw;
+  margin: 0;
+}
+
+.purple-w {
+  color: #7F00FF;
+  margin: 0;
+}
+
+.orange-w {
+  color: #FFA800;
+  margin: 0;
+}
+
+/* SEÇÃO SOBRE */
+.about {
+  width: 100%;
+}
+
+.about>h2 {
+  text-align: center;
+}
+
+.about-block-one,
+.about-block-two {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  margin: 20px 0;
+  /* Margin: top and bottom */
+}
+
+.about-block-one>img {
+  width: 500px;
+  height: 500px;
+  padding-left: 10%;
+  transition: height 0.3s ease, width 0.3s ease;
+}
+
+.about-block-one>img:hover {
+  height: 600px;
+  width: 600px;
+}
+
+.about-block-two>img {
+  width: 700px;
+  height: 500px;
+  transition: height 0.3s ease, width 0.3s ease;
+}
+
+.about-block-two>img:hover {
+  height: 600px;
+  width: 750px;
+}
+
+.about-text {
+  padding: 20px;
+  width: 50%;
+  font-size: 2.5vw;
+  text-align: justify;
+}
+
+/* SEÇÃO AULAS */
 .classes {
-    height: 3330px;
-    background-color: burlywood;
+  background-color: rebeccapurple;
+  width: 100%;
+  height: 100vh;
 }
 
-/* Seção Contatos*/
 .contacts {
-    height: 720px;
-    background-color: darkslategrey;
+  background-color: lightpink;
+  width: 100%;
+  height: 100vh;
 }
 
-
-/* Seção Localização*/
 .local {
-    height: 1130px;
-    background-color: deeppink;
+  background-color: lightcoral;
+  width: 100%;
+  height: 50vh;
 }
-

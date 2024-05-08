@@ -6,206 +6,33 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clube New Way</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@500&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-    /* GERAL */
-    html {
-      height: 100%;
-      width: 100%;
-    }
-
-    body {
-      margin: 0px;
-      font-family: 'Wix Madefor Display', sans-serif;
-      color: white;
-      background-color: #C3B1E1;
-    }
-
-    a {
-      text-decoration: none;
-      color: white;
-    }
-
-    h1 {
-      font-family: "Inter", sans-serif;
-      font-weight: 800;
-      margin: 0;
-    }
-
-    .section-mark {
-      height: 60px;
-      padding: 10px 20px;
-      border-top-right-radius: 50px;
-      border-bottom-right-radius: 50px;
-      background-color: #fc4f00;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .section-mark>h1 {
-      font-size: 2vw;
-    }
-
-    /* TOP NAV */
-    .topnav {
-      background-color: #9F005F;
-      width: 100%;
-      min-height: 80px;
-      z-index: 10;
-      top: 0;
-      display: flex;
-      position: sticky;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    .top-logo>img {
-      max-width: fit-content;
-      max-height: fit-content;
-      padding: 10px;
-      transition: transform 0.3s ease;
-    }
-
-    .top-logo>img:hover {
-      transform: scale(0.9);
-    }
-
-    .top-links {
-      margin-right: 15px;
-    }
-
-    .top-links>a {
-      padding: 10px;
-      font-weight: bold;
-      transition: font-size 0.3s ease, color 0.3s ease;
-    }
-
-    .top-links>a:hover {
-      font-size: large;
-      color: darkorange;
-    }
-
-    /* LOGO */
-    .logo {
-      width: 100%;
-      height: 100vh;
-    }
-
-    .logo-img {
-      height: calc(100vh - 600px);
-      width: 100%;
-      display: flex;
-      flex-flow: column wrap;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-
-    .logo-img>img {
-      z-index: 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 20% 100%;
-    }
-
-    .logo-img>h1,
-    .logo-img>h3 {
-      z-index: 1;
-    }
-
-    .logo-img>h1 {
-      font-size: 10vw;
-    }
-
-    .logo-img>h3 {
-      font-size: 2vw;
-      margin: 0;
-    }
-
-    .purple-w {
-      color: #7F00FF;
-      margin: 0;
-    }
-
-    .orange-w {
-      color: #FFA800;
-      margin: 0;
-    }
-
-    /* SEÇÃO SOBRE */
-    .about {
-      width: 100%;
-    }
-
-    .about>h2 {
-      text-align: center;
-    }
-
-    .about-block-one,
-    .about-block-two {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      align-items: center;
-      padding: 20px;
-      margin: 20px 0;
-      /* Margin: top and bottom */
-    }
-
-    .about-block-one>img {
-      width: 500px;
-      height: 500px;
-      padding-left: 10%;
-      transition: height 0.3s ease, width 0.3s ease;
-    }
-
-    .about-block-one>img:hover {
-      height: 600px;
-      width: 600px;
-    }
-
-    .about-block-two>img {
-      width: 700px;
-      height: 500px;
-      transition: height 0.3s ease, width 0.3s ease;
-    }
-
-    .about-block-two>img:hover {
-      height: 600px;
-      width: 750px;
-    }
-
-    .about-text {
-      padding: 20px;
-      width: 50%;
-      font-size: large;
-    }
-
-    /* SEÇÃO AULAS */
-  </style>
+  <link rel="stylesheet" href="style.css">
+  
 </head>
 
 <body>
   <div class="topnav">
-    <div class="top-logo">
-      <img src="img/logo.svg" alt="Logo do clube; Dois W pintados nas cores laranja e roxo.">
-    </div>
-    <div class="top-links">
-      <a href="#about">SOBRE NÓS</a>
-      <a href="#classes">PROGRAMAS</a>
-      <a href="#contacts">CONTATOS</a>
-      <a href="local">LOCALIZAÇÃO</a>
-    </div>
+      <div class="top-logo">
+          <img src="img/logo.svg" alt="Logo do clube; Dois W pintados nas cores laranja e roxo.">
+      </div>
+      <div class="top-links">
+          <a href="#about">SOBRE NÓS</a>
+          <a href="#classes">PROGRAMAS</a>
+          <a href="#contacts">CONTATOS</a>
+          <a href="#local">LOCALIZAÇÃO</a>
+      </div>
+      <div class="dropdown-icon">
+          <button class="dropdown-btn" onclick="toggleMenu()">&#9776;</button>
+          <div id="dropdown-content" class="dropdown-content">
+              <a href="#about">SOBRE NÓS</a>
+              <a href="#classes">PROGRAMAS</a>
+              <a href="#contacts">CONTATOS</a>
+              <a href="#local">LOCALIZAÇÃO</a>
+          </div>
+      </div>
   </div>
+
+
   <div class="logo">
     <div class="logo-img">
       <img src="img/pexels-rdne-stock-project-7335269 1.svg" alt="">
@@ -242,6 +69,10 @@
     </div>
   </div>
   <div class="classes" id="classes"></div>
+  <div class="contacts" id="contacts"></div>
+  <div class="local" id="local"></div>
+
+   <script src="script.js"></script>
 </body>
 
 </html>
